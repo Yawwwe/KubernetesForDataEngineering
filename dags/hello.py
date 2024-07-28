@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 default_args = {
     'owner': 'Gonzalo',
              'start_date': datetime(2024, 7, 18),
-             'catch_up':False
+             'catch_up': False
 }
 
 dag = DAG('hello_world',
@@ -19,7 +19,7 @@ task1 = BashOperator(
 
 task2 = BashOperator(
     task_id='hello_gonzalo',
-    bash_command='echo "Aprende k8s, sera divertido, dijeron ******"',
+    bash_command='echo "Aprende k8s, sera divertido, dijeron *******"',
     dag=dag
 )
 
